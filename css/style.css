@@ -1,0 +1,79 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: white;
+}
+
+/* Destinos */
+#destinos .card img {
+    object-fit: cover;
+    height: 200px;
+}
+/* Tarjetas de destino */
+.destino .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destino .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+#sugerencias {
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#sugerencias .list-group-item:hover {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+/* Estilos para el mensaje de confirmación */
+.mensaje-confirmacion {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #28a745;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Clase visible para mostrar el mensaje */
+.mensaje-confirmacion.visible {
+    opacity: 1;
+    transform: translate(-50%, -40%);
+}
+
+/* Clase oculto para ocultar el mensaje */
+.mensaje-confirmacion.oculto {
+    opacity: 0;
+}
+/* Ajustes de transición para el mensaje */
+.alert {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.alert.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.alert.hide {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+
